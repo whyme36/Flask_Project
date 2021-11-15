@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="navbar-nav mr-auto">
+                {% if current_user.is_authenticated %}
+                    <h1>Hej! Jesteś już zalogowany!</h1>
+                        <p>Jeżeli pragniesz uzyskać więcej informacji prosze o wylogowanie i powrót na tę stronę :D</p>
+                {% else %}
+                    <h1>Witamy w bazie przechowujacej dane csv</h1>
+                    <p>Baza zostałą stworozna dla użytkowników, którzy chcą przechować dane zawarte w plikach .csv do ponownego użytku,
+                        opisać je oraz oznaczyć w celu łatwiejszego dostępu oraz pełnego obrazu posiadanych danych. </p>
+                    <p><b>Baza opiera się na:</b><ol>
+                            <li>Stworzeniu konta (wypełnieniu formularza rejestracyjnego)</li>
+                            <li>Zalogowaniu się</li>
+                            <li>Dodawaniu nowych postów z danymi</li>
+                            <li>Przeglądaniu swoich postów oraz operacje na nich (usun, pobierz plik .csv)</li>
+                            </ol></p>
+                    <p>Jeżeli zaznajomiłeś sie z funkcjonowaniem witryny i jest dla Ciebie odpowiednia, nie zostało mi nic innego jak powiedzenie.</p>
+                    <p> <b>Miłego użytkowania! :D</b></p>
+                {% endif %}
+        </div>
+
+{% endblock content %}
